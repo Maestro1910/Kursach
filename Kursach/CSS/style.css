@@ -1,0 +1,898 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(20,29,44,1) 25%, rgba(215,37,71,1) 50%, rgba(20,29,44,1) 75%);
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 29, 44, 1) 33%,
+    rgba(215, 37, 71, 1) 100%
+  );
+  background-size: cover;
+}
+
+ header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 20px;
+  background-color: #141d2c;
+  height: 180px;
+}
+
+header {
+  padding: 5px 5px;
+}
+
+header .logo {
+  text-transform: uppercase;
+  font-size: 29px;
+  font-weight: 80px;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  float: right;
+  width: 80vw;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul span {
+  display: inline-block;
+  padding: 15px;
+  margin-top: 15px;
+  
+}
+
+
+header nav ul span a {
+  color: white;
+  font-size: 18px;
+}
+
+header nav ul span a:hover {
+  border-bottom: 5px solid #d72547;
+}
+
+.log-in {
+  color: #b92443;
+}
+
+.hero {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.hero-info {
+  height: 500px;
+  padding-left: 20px;
+}
+
+.hero .hero-png {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 80px;
+}
+
+.avatar {
+  padding: 0px 0px px 900px;
+}
+
+
+.hero-info h1 {
+  color: white;
+  max-width: 1200px;
+  font-size: 2em; /* Уменьшен для более компактного заголовка */
+  margin-bottom: 10px; /* Добавлен отступ снизу для отделения от других элементов */
+}
+
+.hero-info h2 {
+  color: white;
+  max-width: 1200px;
+  font-size: 1.5em; /* Уменьшен для более компактного подзаголовка */
+  margin-bottom: 15px; /* Добавлен отступ снизу для улучшения читабельности */
+}
+
+.hero-info span {
+  max-width: 1200px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Увеличен отступ для большего пространства между элементами */
+  align-items: start;
+  color: white;
+  font-size: 1.125em; /* Уменьшен для лучшего соответствия основному тексту */
+}
+
+.hero-info p {
+  max-width: 1200px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Увеличен отступ для большего пространства между абзацами */
+  align-items: start;
+  color: white;
+  font-size: 0.875em; /* Уменьшен для более компактного и читабельного текста */
+}
+
+
+
+
+
+/* Окно входа в аккаунт */
+
+.log {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 29, 44, 1) 33%,
+    rgba(215, 37, 71, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  position: relative;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+form h2 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inputbox {
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+  background-color: transparent;
+
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  font-size: 1em;
+  padding: 0 5px;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+  
+}
+
+.inputbox .password_fields input:nth-child(2),
+.inputbox .password_fields input:nth-child(3) {
+  width: 180px;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:not(:placeholder-shown) ~ label {
+  top: -10px;
+  font-size: 0.85em;
+  color: yellow;
+}
+
+
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.log_in {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.log_in p a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.log_in p a:hover {
+  text-decoration: underline;
+}
+
+.notice-error {
+  color: red;
+  margin: 35px;
+  font-size: 14px;
+  background-color: rgba(230, 10, 10, 0.1); 
+  border: 1px solid red; 
+  border-radius: 10px;
+  min-height: 40px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+/* Окно регистрации */
+.password_fields {
+  display: flex;
+  gap: 10px;
+  width: 360px;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+}
+
+
+.user {
+  margin-left: auto;
+  color: white;
+  font-size: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+/* Продажа товара */
+
+.wrapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 29, 44, 1) 33%,
+    rgba(215, 37, 71, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.window {
+  position: relative;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.inputboxer {
+  color: white;
+}
+
+.inputboxer input{
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  padding: 30px;
+  outline: none;
+  font-size: 1em;
+  padding: 0 5px;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+.inputboxer select {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  padding: 30px;
+  font-size: 1em;
+  padding: 0 5px;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.inputboxer select option {
+  background-color: #333;
+  color: white;
+}
+
+.inputboxer label, select, input{
+  margin-bottom: 10px;
+}
+
+.price {
+  margin-bottom: 30px;
+}
+
+
+/* Таблица */
+
+.table-backgroung {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 29, 44, 1) 33%,
+    rgba(215, 37, 71, 1) 100%
+  );
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  margin: 20px;
+}
+
+.style-table {
+  
+  padding: 15px;
+  border: 20px;
+  border-color: black;
+}
+
+.table-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  
+}
+
+
+
+.create-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80%;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 29, 44, 1) 33%,
+    rgba(215, 37, 71, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* КАТАЛОГ ТОВАРОВ */
+
+.product-catalog {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+  max-height: 750px; 
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 90%;
+  max-height: 280px; 
+  object-fit: cover;
+  margin: 10px 0;
+}
+
+.product-card h3 {
+  font-size: 1.3em;
+  margin: 10px 0;
+  color: #333;
+  max-width: 100%;
+  height: 60px;
+}
+
+.product-card p {
+  margin: 10px 0;
+  color: #777;
+  font-size: 1em;
+}
+
+.product-card p.price {
+  margin: 10px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+}
+
+.product-card button {
+  background-color: rgba(215, 37, 71, 1);
+  color: white;
+  max-width: 80%;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.product-card button:hover {
+  background-color: rgba(215, 37, 71, 1);
+  opacity: 0.8;
+}
+
+/* Выравнивание элементов по высоте */
+.product-card-content {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
+}
+
+.product-card-content h3,
+.product-card-content p {
+  margin: 10px 20px;
+}
+
+.product-card-content p.price {
+  margin: 10px 0;
+}
+
+
+.product-card-content h3,
+.product-card-content p {
+  margin: 10px 20px;
+}
+
+.product-card-content p.price {
+  margin: 10px 0;
+}
+
+
+
+/* КОРЗИНА ТОВАРОВ */
+
+.cart-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.cart-item-content {
+  flex-grow: 1;
+}
+
+.cart-item-content h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.price {
+  color: #28a745;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.quantity-button:hover {
+  background-color: #0056b3;
+}
+
+.quantity {
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.remove-form {
+  margin-left: 20px;
+}
+
+.remove-from-cart {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.remove-from-cart:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .cart-item-image {
+      margin-bottom: 10px;
+  }
+
+  .remove-form {
+      margin-left: 0;
+      margin-top: 10px;
+  }
+}
+
+.order-button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all .5s;
+}
+
+.order-button:hover {
+  background-color: #218838;
+}
+
+.date {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1em; 
+  padding: 10px; 
+  margin: 10px 0; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #333; /* Цвет текста */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 400px;
+}
+
+.date:focus {
+  border-color: #007BFF; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+  outline: none; 
+}
+
+.responsive-img {
+  max-width: 360px;
+  max-height: 280px;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.order-date{
+  color: white;
+}
+
+
+/* ЗАКАЗЫ */
+.orders-container {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 10px; 
+  
+}
+
+.order-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.order-item h3 {
+  color: #333;
+  margin-top: 0;
+}
+
+.order-item p {
+  color: #555;
+  margin: 5px 0;
+}
+
+.order-item p:first-child {
+  font-weight: bold;
+}
+
+.order-item .delete-button {
+  background-color: #e74c3c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff; 
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.order-item .delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* .no-orders {
+  text-align: center;
+  color: #888;
+  margin-top: 50px;
+  font-size: 18px;
+} */
+
+
+
+/* КЛИЕНТЫ */
+
+.users-container {
+  
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+}
+
+table {
+  
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+table th {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.table-button{
+  background-color: transparent;
+}
+
+
+.users-container h2 {
+  color: #000;
+}
+
+
+
+/* ЗАКАЗЫ КЛИЕНТОВ */
+.clients_orders-container {
+  min-width: 80vw;
+  margin: 20px auto; 
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+}
+
+.clients_orders-container table {
+  
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+.clients_orders-container th, .clients_orders-container td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.clients_orders-container th {
+  background-color: #f2f2f2;
+}
+
+.clients_orders-container h2 {
+  color: #030202;
+}
+
+
+
+
+/* Отчет по продажам */
+.sales-report {
+  background-color: transparent;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+}
+
+.sales-report table {
+  
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+.sales-report th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+
+.sales-report h2 {
+  color: #000;
+}
+
+
+/* FOOTER */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(20, 29, 44, 1);
+  height: 190px;
+  width: 100%;
+  margin-top: 256px;
+}
+
+.footer-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  float: left;
+  padding: 20px;
+}
+
+.footer-text a {
+  color: white;
+  text-decoration: none;
+  left: 80px;
+}
+
+.project {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  height: 30px;
+}
+
